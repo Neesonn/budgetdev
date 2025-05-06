@@ -1,0 +1,59 @@
+{
+  "name": "motion-budget",
+  "version": "0.1.10",
+  "description": "A modern dashboard for tracking your budget and tasks",
+  "author": "Michael Neeson",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export",
+    "electron": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "@radix-ui/react-icons": "^1.3.2",
+    "@radix-ui/react-slot": "^1.2.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.9.7",
+    "lucide-react": "^0.507.0",
+    "next": "15.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "recharts": "^2.15.3",
+    "tailwind-merge": "^3.2.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4.1.5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
+    "electron": "^22.3.27",
+    "electron-builder": "^26.0.12",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.1",
+    "postcss": "^8.5.3",
+    "serve": "^14.2.4",
+    "tailwindcss": "^4.1.5",
+    "typescript": "^5"
+  },
+  "build": {
+    "appId": "com.motionbudget.app",
+    "productName": "Motion Budget",
+    "files": [
+      "out/**/*",
+      "main.js"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "public/icon.ico"
+    }
+  }
+}
